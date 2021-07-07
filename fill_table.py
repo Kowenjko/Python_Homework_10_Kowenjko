@@ -38,7 +38,7 @@ try:
     fprint(cursor.fetchall())
     # 3. Show the list of first, last names and ages of the employees whose age is greater than 55. The result should be sorted by last name.
     cursor.execute(
-        f"""Select first_name,last_name from employee
+        f"""Select first_name,last_name,{date} from employee
            where ({date})  >55
            order by last_name""")
     fprint(cursor.fetchall())
